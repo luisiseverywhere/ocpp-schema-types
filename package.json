@@ -1,0 +1,28 @@
+{
+  "name": "ocpp-schema-types",
+  "version": "1.0.0",
+  "description": "A project which uses official ocpp schema data (provided by OCA) and generates the types for request and responses of each occp command",
+  "main": "main.js",
+  "scripts": {
+    "prebuild": "rm -rf ./build && npm install && tsc",
+    "copy:schemas": "cp -r ./src/ocpp1.6/ ./build",
+    "build:types": "json2ts -i ./src/ocpp1.6 -o ./build/ocpp1.6",
+    "build": "npm run build:types && npm run copy:schemas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisiseverywhere/ocpp-shema-types.git"
+  },
+  "keywords": [
+    "ocpp"
+  ],
+  "author": "Luis Teixeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisiseverywhere/ocpp-shema-types/issues"
+  },
+  "homepage": "https://github.com/luisiseverywhere/ocpp-shema-types#readme",
+  "devDependencies": {
+    "json-schema-to-typescript": "^10.0.0"
+  }
+}
