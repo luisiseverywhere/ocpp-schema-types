@@ -1,6 +1,6 @@
 {
   "name": "@luisiseverywhere/ocpp-schema-types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A project which uses official ocpp schema data (provided by OCA) and generates the types for request and responses of each occp command",
   "main": "main.js",
   "scripts": {
