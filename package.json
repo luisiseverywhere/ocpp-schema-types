@@ -7,7 +7,8 @@
     "prebuild": "rm -rf ./build && npm install && tsc",
     "copy:schemas": "cp -r ./src/ocpp1.6/ ./build",
     "build:types": "json2ts -i ./src/ocpp1.6 -o ./build/ocpp1.6",
-    "build": "npm run build:types && npm run copy:schemas"
+    "build": "npm run build:types && npm run copy:schemas",
+    "publish": "cd ./build && npm publish"
   },
   "repository": {
     "type": "git",
