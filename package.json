@@ -1,6 +1,6 @@
 {
   "name": "@luisiseverywhere/ocpp-schema-types",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A project which uses official ocpp schema data (provided by OCA) and generates the types for request and responses of each occp command",
   "main": "",
   "scripts": {
@@ -17,7 +17,18 @@
     "url": "git+https://github.com/luisiseverywhere/ocpp-shema-types.git"
   },
   "keywords": [
-    "ocpp"
+    "ocpp",
+    "ocpp1.6",
+    "ocpp schema",
+    "ocpp schemas",
+    "ocpp types",
+    "ocpp1.6 schema",
+    "ocpp1.6 schemas",
+    "ocpp1.6 types",
+    "ocpp schema to type",
+    "ocpp schemas to types",
+    "ocpp1.6 schema to type",
+    "ocpp1.6 schemas to types"
   ],
   "author": "Luis Teixeira",
   "license": "ISC",
