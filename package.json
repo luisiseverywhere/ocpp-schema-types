@@ -1,12 +1,13 @@
 {
   "name": "@luisiseverywhere/ocpp-schema-types",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A project which uses official ocpp schema data (provided by OCA) and generates the types for request and responses of each occp command",
   "main": "",
   "scripts": {
     "build:types": "json2ts -i ./src/ocpp1.6/schemas -o ./src/ocpp1.6/types",
-    "prebuild": "rm -rf ./build && npm install && npm run build:types",
-    "copy:schemas": "cp -R ./src/ocpp1.6/schemas ./build",
+    "build:commands": "node schema2command.js",
+    "prebuild": "rm -rf ./build && npm install && npm run build:types && npm run build:commands",
+    "copy:schemas": "cp -R ./src/ocpp1.6/schemas ocpp-commands.d.ts ./build",
     "copy:types": "cp -R ./src/ocpp1.6/types ./build",
     "copy:assets": "cp package.json README.md ./build",
     "build": "mkdir build && npm run copy:schemas && npm run copy:types && npm run copy:assets",
